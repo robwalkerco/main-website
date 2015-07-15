@@ -1,0 +1,68 @@
+---
+# stylesheet
+# @author nabil freeman http://github.com/nabilfreeman
+---
+
+body{
+	font-family:'Menlo', 'Ubuntu', 'Courier New', 'Courier', monospace;
+
+	text-align:center;
+
+	line-height:2;
+
+	margin:0px;
+	padding:0px 20px;
+
+	.container{
+		margin:0 auto;
+		max-width:600px;
+	}
+
+	h1{
+		margin-top:60px;
+	}
+
+	img{
+		max-width:160px;
+
+		&.logo{
+			margin-top:60px;
+		}
+	}
+
+	ul{
+		list-style:none;
+		padding:20px 0px;
+		font-weight:bold;
+		text-align:center;
+
+		li{
+			display:inline-block;
+			background:#4000FF;
+
+			a{
+				color:#FFF;
+			}
+
+			div{
+				display:block;
+				padding:10px 0px;
+				color:#FFF;
+			}
+
+			video{
+				display:block;
+				height:240px;
+			}
+		}
+	}
+
+	footer{
+		margin:60px 0px;
+		color:#888;
+	}
+}
+
+voternator-main{
+	margin-top:60px;
+}

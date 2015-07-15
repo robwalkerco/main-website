@@ -1,0 +1,38 @@
+body {
+  font-family: 'Menlo', 'Ubuntu', 'Courier New', 'Courier', monospace;
+  text-align: center;
+  line-height: 2;
+  margin: 0px;
+  padding: 0px 20px; }
+  body .container {
+    margin: 0 auto;
+    max-width: 600px; }
+  body h1 {
+    margin-top: 60px; }
+  body img {
+    max-width: 160px; }
+    body img.logo {
+      margin-top: 60px; }
+  body ul {
+    list-style: none;
+    padding: 20px 0px;
+    font-weight: bold;
+    text-align: center; }
+    body ul li {
+      display: inline-block;
+      background: #4000FF; }
+      body ul li a {
+        color: #FFF; }
+      body ul li div {
+        display: block;
+        padding: 10px 0px;
+        color: #FFF; }
+      body ul li video {
+        display: block;
+        height: 240px; }
+  body footer {
+    margin: 60px 0px;
+    color: #888; }
+
+voternator-main {
+  margin-top: 60px; }
