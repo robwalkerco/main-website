@@ -3,6 +3,30 @@
 # @author nabil freeman http://github.com/nabilfreeman
 ---
 
+@mixin box-sizing($type){
+	-webkit-box-sizing:$type;
+	-moz-box-sizing:$type;
+	-ms-box-sizing:$type;
+	-o-box-sizing:$type;
+	box-sizing:$type;
+}
+
+@mixin transform($command){
+	-webkit-transform:$command;
+	-moz-transform:$command;
+	-ms-transform:$command;
+	-o-transform:$command;
+	transform:$command;
+}
+
+@mixin transition($length){
+	-webkit-transition:$length;
+	-moz-transition:$length;
+	-ms-transition:$length;
+	-o-transition:$length;
+	transition:$length;
+}
+
 body{
 	font-family:'Menlo', 'Ubuntu', 'Courier New', 'Courier', monospace;
 
@@ -11,11 +35,12 @@ body{
 	line-height:2;
 
 	margin:0px;
-	padding:0px 20px;
+	padding:0px;
 
 	.container{
 		margin:0 auto;
 		max-width:600px;
+		padding:0px 20px;
 	}
 
 	h1{
@@ -27,6 +52,40 @@ body{
 
 		&.logo{
 			margin-top:60px;
+		}
+	}
+
+	.headline{
+		position:relative;
+		overflow:hidden;
+		font-size:0px;
+
+		video{
+			position:absolute;
+			top:50%;
+			left:50%;
+			@include transform(translateX(-50%) translateY(-50%));
+			z-index:1;
+			width:100%;
+		}
+
+		&:after{
+			content:'';
+			position:absolute;
+			top:0px;
+			left:0px;
+			right:0px;
+			bottom:0px;
+
+			z-index:2;
+
+			background:rgba(0,0,0,0.4);
+		}
+
+		img.logo{
+			position:relative;
+			z-index:3;
+			margin:60px 0px;
 		}
 	}
 
@@ -65,4 +124,72 @@ body{
 
 voternator-main{
 	margin-top:60px;
+}
+
+
+
+
+
+
+
+.voternator-demo{
+
+	.colour_selector{
+		button{
+			@include transition(0.2s);
+
+			width:30px;
+			height:30px;
+			border:none;
+			display:inline-block;
+			outline:none;
+			position:relative;
+			top:-3px;
+			vertical-align:middle;
+
+			@include box-sizing(border-box);
+
+			cursor:pointer;
+		}
+
+		.active{
+			@include transform(scale(1.2));
+			margin:0px 5px;
+		}
+
+		input{
+			height:30px;
+			width:100px;
+			position:relative;
+			top:-3px;
+			vertical-align:middle;
+			background:#F0F0F0;
+
+			font-family:'Menlo', 'Courier New', Courier, monospace;
+			padding:0px 10px;
+
+			border:none;
+
+			font-size:16px;
+		}
+	}
+
+	.voternator_preview{
+		margin:60px 0px;
+	}
+
+	.voternator_code{
+		background:#F0F0F0;
+		border-radius:5px;
+		color:#FFF;
+		padding:20px;
+		color:#000;
+
+		.color{
+			padding:5px;
+			color:#FFF;
+			border-radius:3px;
+		}
+	}
+
 }
