@@ -5,7 +5,7 @@
 		<meta name="charset" content="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-		<title>Freeman Industries</title>
+		<title>The Voternator - a Buzzfeed-style ratings widget</title>
 
 		<link rel="stylesheet" href="/css/main.css">
 		<script src="/js/main.js"></script>
@@ -29,6 +29,10 @@
 				A ratings widget inspired by the ones seen on sites like Buzzfeed. It's embeddable on any web page - app, blog, ecommerce, and anything else.
 			</p>
 
+			<p>
+				Try it out:
+			</p>
+
 			<div class="voternator_preview">
 				<script id="the-voternator" async src="https://s3.amazonaws.com/the-voternator-resources/js/main.js" color="#4000FF"></script>
 			</div>
@@ -40,7 +44,7 @@
 				</h1>
 
 				<p>
-					<div class="colour_selector">
+					<div class="color_selector">
 						<span>Choose a colour:</span>
 						<button data-color="#4000FF" class="active" ontouchstart style="background:#4000FF"></button>
 						<button data-color="#008CFF" ontouchstart style="background:#008CFF"></button>
@@ -50,9 +54,9 @@
 					</div>
 
 					<script>
-						var colour_selector = document.querySelector(".colour_selector");
-						var buttons = colour_selector.querySelectorAll("button");
+						var color_selector = document.querySelector(".color_selector");
 
+						var buttons = color_selector.querySelectorAll("button");
 						buttons.forEach(function(button){
 							button.addEventListener("click", function(){
 								var button_color = button.getAttribute("data-color");
@@ -63,7 +67,7 @@
 								window._voternator.instream.customColor("instream", button_color);
 								// document.querySelector(".voternator_preview").style.backgroundColor = button_color;
 
-								document.querySelector(".voternator_code .color").innerHTML = button_color;
+								document.querySelector(".voternator_code .color").textContent = button_color;
 								document.querySelector(".voternator_code .color").setAttribute("style", "background-color:" + button_color);
 
 								buttons.forEach(function(el){
@@ -73,13 +77,27 @@
 								});
 							})
 						});
+
+						var input = color_selector.querySelector("input");
+						input.addEventListener("focus", function(e){
+							buttons.forEach(function(el){
+								el.classList.remove("active");
+							});
+						});
+						input.addEventListener("keyup", function(e){
+							window._voternator.instream.customColor("instream", input.value);
+
+							document.querySelector(".voternator_code .color").textContent = input.value;
+							document.querySelector(".voternator_code .color").setAttribute("style", "background-color:" + input.value);
+						});
+
 					</script>
 
 					<div class="voternator_code">
 						&lt;script id="the-voternator" async src="https://s3.amazonaws.com/the-voternator-resources/js/main.js" color="<span class="color" style="background-color:#4000FF">#4000FF</span>"&gt;&lt;/script&gt;
 
 						<p>
-							Place this line of code exactly where you want The Voternator to appear.
+							Place the above code exactly where you want The Voternator to appear.
 						</p>
 					</div>
 
