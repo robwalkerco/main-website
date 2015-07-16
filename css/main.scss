@@ -176,19 +176,33 @@ voternator-main{
 
 	.voternator_preview{
 		margin:60px 0px;
+
+		voternator-main{
+			padding-top:0px;
+		}
 	}
 
 	.voternator_code{
 		background:#F0F0F0;
-		border-radius:5px;
 		color:#FFF;
 		padding:20px;
 		color:#000;
+		margin-top:60px;
 
 		.color{
 			padding:5px;
 			color:#FFF;
 			border-radius:3px;
+		}
+
+		p{
+			margin:-20px;
+			margin-top:20px;
+			background:#000;
+			font-size:12px;
+			padding:10px 20px;
+			color:#FFF;
+			line-height:25px;
 		}
 	}
 
