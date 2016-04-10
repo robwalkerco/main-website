@@ -1,17 +1,69 @@
----
-# stylesheet
-# @author nabil freeman http://github.com/nabilfreeman
----
-
 .voternator-demo{
 
-	.colour_selector{
+	.color_selector{
 		button{
+			@include transition(0.2s);
+
+			margin:10px 0px;
 			width:30px;
 			height:30px;
 			border:none;
 			display:inline-block;
 			outline:none;
+			position:relative;
+			top:-3px;
+			vertical-align:middle;
+
+			@include box-sizing(border-box);
+
+			cursor:pointer;
+		}
+
+		.active{
+			@include transform(scale(1.2));
+			margin:0px 5px;
+		}
+
+		input{
+			height:30px;
+			width:100px;
+			position:relative;
+			top:-3px;
+			vertical-align:middle;
+			background:#F0F0F0;
+
+			font-family:'Menlo', 'Courier New', Courier, monospace;
+			padding:0px 10px;
+
+			border:none;
+
+			font-size:16px;
+		}
+	}
+
+	.voternator_code{
+		background:#F0F0F0;
+		color:#FFF;
+		padding:20px;
+		color:#000;
+		margin-top:60px;
+		margin-bottom:100px;
+
+		.color{
+			padding:5px;
+			color:#FFF;
+			background:#000;
+			border-radius:3px;
+		}
+
+		p{
+			margin:-20px;
+			margin-top:20px;
+			background:#000;
+			font-size:12px;
+			padding:10px 20px;
+			color:#FFF;
+			line-height:25px;
 		}
 	}
 

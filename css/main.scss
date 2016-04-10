@@ -39,12 +39,26 @@ body{
 
 	.container{
 		margin:0 auto;
-		max-width:600px;
+		max-width:700px;
 		padding:0px 20px;
 	}
 
 	h1{
 		margin-top:60px;
+		font-size:32px;
+	}
+
+	a{
+		color:#4000FF;
+		font-weight:bold;
+
+		&:visited{
+			opacity:0.6;
+		}
+
+		&.huge{
+			font-size:32px;
+		}
 	}
 
 	img{
@@ -89,18 +103,28 @@ body{
 		}
 	}
 
-	ul{
+	ul.thumbs{
 		list-style:none;
-		padding:20px 0px;
+		padding:20px;
 		font-weight:bold;
 		text-align:center;
+		font-size:0px;
 
 		li{
 			display:inline-block;
 			background:#4000FF;
+			font-size:14px;
+			margin:5px;
+
+			&:hover{
+				a{
+					text-decoration:underline;
+				}
+			}
 
 			a{
 				color:#FFF;
+				text-decoration:none;
 			}
 
 			div{
@@ -116,84 +140,25 @@ body{
 		}
 	}
 
+	.app-links{
+		font-size:0px;
+
+		img{
+			height:50px;
+			max-width:99999px;
+			margin-top:30px;
+			margin-right:10px;
+		}
+
+		a:last-child img{
+			margin-right:0px;
+		}
+	}
+
 	footer{
 		margin:60px 0px;
 		color:#888;
 	}
 }
 
-
-
-
-
-
-.voternator-demo{
-
-	.color_selector{
-		button{
-			@include transition(0.2s);
-
-			margin:10px 0px;
-			width:30px;
-			height:30px;
-			border:none;
-			display:inline-block;
-			outline:none;
-			position:relative;
-			top:-3px;
-			vertical-align:middle;
-
-			@include box-sizing(border-box);
-
-			cursor:pointer;
-		}
-
-		.active{
-			@include transform(scale(1.2));
-			margin:0px 5px;
-		}
-
-		input{
-			height:30px;
-			width:100px;
-			position:relative;
-			top:-3px;
-			vertical-align:middle;
-			background:#F0F0F0;
-
-			font-family:'Menlo', 'Courier New', Courier, monospace;
-			padding:0px 10px;
-
-			border:none;
-
-			font-size:16px;
-		}
-	}
-
-	.voternator_code{
-		background:#F0F0F0;
-		color:#FFF;
-		padding:20px;
-		color:#000;
-		margin-top:60px;
-		margin-bottom:100px;
-
-		.color{
-			padding:5px;
-			color:#FFF;
-			background:#000;
-			border-radius:3px;
-		}
-
-		p{
-			margin:-20px;
-			margin-top:20px;
-			background:#000;
-			font-size:12px;
-			padding:10px 20px;
-			color:#FFF;
-			line-height:25px;
-		}
-	}
-
-}
+@import "voternator-demo";
