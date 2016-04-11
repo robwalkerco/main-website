@@ -1,0 +1,31 @@
+{% if page.link %}
+	<p>
+		<a class="huge" href="{{ page.link }}">
+			{{ page.link | replace:'https://','' | replace:'http://','' }}
+		</a>
+	</p>
+{% endif  %}
+
+{% if page.ios || page.android %}
+	<p class="app-links">
+		{% if page.ios %}
+			<a href="{{ page.ios }}">
+				<img src="/img/appstore.svg">
+			</a>
+		{% endif %}
+
+		{% if page.android %}
+			<a href="{{ page.android }}">
+				<img src="/img/playstore.svg">
+			</a>
+		{% endif %}
+	</p>
+{% endif %}
+
+{% if page.source %}
+	<p>
+		<a href="{{ page.source }}">
+			Source code on GitHub
+		</a>
+	</p>
+{% endif %}

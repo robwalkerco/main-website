@@ -1,3 +1,5 @@
 # File: _config.yml
 sass:
   sass_dir: ./css/_sass
+
+includes_dir: ./_includes
