@@ -4,9 +4,14 @@
 		src="https://freeman-industries.github.io/portfolio-videos/15fps/{{ 
 	page.slug }}.mp4"
 		muted
-		autoplay
 		loop
 		poster="https://freeman-industries.github.io/portfolio-videos/15fps/{{ page.slug }}.jpg">
 	</video>
 	<a href="/"><img class="logo" src="/img/freeman.svg"></a>
 </div>
+
+<script>
+	if(document.body.clientWidth > 716){
+		document.querySelector(".headline video").play();
+	}
+</script>
