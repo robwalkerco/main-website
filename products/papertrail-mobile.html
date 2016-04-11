@@ -1,23 +1,19 @@
+---
+title: Papertrail for Mobile - Statutory record-keeping on the go
+slug: papertrail-mobile
+
+ios: https://itunes.apple.com/app/papertrail/id1016424070
+android: https://play.google.com/store/apps/details?id=mobi.cemas.io.papertrail_android
+---
 <!DOCTYPE html>
 <html>
-<head>
-
-		<meta name="charset" content="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-		<title>Papertrail for Mobile - Statutory record-keeping on the go</title>
-
-		<link rel="stylesheet" href="/css/main.css">
-		<script src="/js/main.js"></script>
-
+	<head>
+		{% include meta.html title=page.title %}
 	</head>
 
 	<body>
 
-		<div class="headline">
-			<video class="headline" src="https://freeman-industries.github.io/portfolio-videos/15fps/papertrail-mobile.mp4" muted autoplay loop></video>
-			<a href="/"><img class="logo" src="/img/freeman.svg"></a>
-		</div>
+		{% include headline.html slug=page.slug %}
 
 		<div class="container">
 
@@ -37,19 +33,11 @@
 				We helped them implement new features, add tablet support, activity monitoring and crash detection (Sentry & Fabric), code refactoring and finally an app-wide design iteration that took the mobile experience to the same level as their web app.
 			</p>
 
-			<p class="app-links">
-				<a href="https://itunes.apple.com/app/papertrail/id1016424070">
-					<img src="/img/appstore.svg">
-				</a>
-				<a href="https://play.google.com/store/apps/details?id=mobi.cemas.io.papertrail_android">
-					<img src="/img/playstore.svg">
-				</a>
-			</p>
-
-			<footer>
-				&copy; <script>document.write(new Date().getFullYear())</script> Freeman Industries.
-			</footer>
+			{% include links.html %}
+			
 		</div>
+
+		{% include footer.html %}
 
 	</body>
 </html>

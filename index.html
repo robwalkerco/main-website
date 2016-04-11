@@ -1,14 +1,10 @@
+---
+title: Freeman Industries
+---
 <!DOCTYPE html>
 <html>
-<head>
-
-		<meta name="charset" content="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-		<title>Freeman Industries</title>
-
-		<link rel="stylesheet" href="/css/main.css">
-
+	<head>
+		{% include meta.html title=page.title %}
 	</head>
 
 	<body>
@@ -34,75 +30,60 @@
 		</div>
 
 		<p>
-			<ul class="thumbs">
-				<li>
-					<a href="products/lesalon.html">
-						<video src="https://freeman-industries.github.io/portfolio-videos/15fps/lesalon.mp4" muted autoplay loop></video>
-						<div>LeSalon</div>
-					</a>
-				</li>
-				<li>
-					<a href="products/papertrail-mobile.html">
-						<video src="https://freeman-industries.github.io/portfolio-videos/15fps/papertrail-mobile.mp4" muted autoplay loop></video>
-						<div>Papertrail for Mobile</div>
-					</a>
-				</li>
-				<li>
-					<a href="products/tippler.html">
-						<video src="https://freeman-industries.github.io/portfolio-videos/15fps/tippler.mp4" muted autoplay loop></video>
-						<div>Tippler</div>
-					</a>
-				</li>
-				<li>
-					<a href="products/receptive.html">
-						<video src="https://freeman-industries.github.io/portfolio-videos/15fps/receptive.mp4" muted autoplay loop></video>
-						<div>Receptive</div>
-					</a>
-				</li>
-				<li>
-					<a href="products/emojify.html">
-						<video src="https://freeman-industries.github.io/portfolio-videos/15fps/emojify.mp4" muted autoplay loop></video>
-						<div>Emojify</div>
-					</a>
-				</li>
-				<li>
-					<a href="products/papertrail.html">
-						<video src="https://freeman-industries.github.io/portfolio-videos/15fps/papertrail.mp4" muted autoplay loop></video>
-						<div>Papertrail for Web</div>
-					</a>
-				</li>
-				<li>
-					<a href="products/emberwatch.html">
-						<video src="https://freeman-industries.github.io/portfolio-videos/15fps/emberwatch.mp4" muted autoplay loop></video>
-						<div>EmberWatch</div>
-					</a>
-				</li>
-				<li>
-					<a href="products/deck-of-cards-workout.html">
-						<video src="https://freeman-industries.github.io/portfolio-videos/15fps/deck-of-cards-workout.mp4" muted autoplay loop></video>
-						<div>Deck of Cards Workout</div>
-					</a>
-				</li>
-				<li>
-					<a href="products/famous-workouts.html">
-						<video src="https://freeman-industries.github.io/portfolio-videos/15fps/famous-workouts.mp4" muted autoplay loop></video>
-						<div>Famous Workouts</div>
-					</a>
-				</li>
-				<li>
-					<a href="products/voternator.html">
-						<video src="https://freeman-industries.github.io/portfolio-videos/15fps/voternator.mp4" muted autoplay loop></video>
-						<div>The Voternator</div>
-					</a>
-				</li>
+			<div class="thumbs">
+				{% include thumbnail.html 
+					title="LeSalon" 
+					slug="lesalon" 
+				%}
+				
+				{% include thumbnail.html 
+					title="Papertrail for Mobile" 
+					slug="papertrail-mobile" 
+				%}
+				
+				{% include thumbnail.html 
+					title="Tippler" 
+					slug="tippler" 
+				%}
+				
+				{% include thumbnail.html 
+					title="Receptive" 
+					slug="receptive" 
+				%}
+				
+				{% include thumbnail.html 
+					title="Emojify" 
+					slug="emojify" 
+				%}
+				
+				{% include thumbnail.html 
+					title="Papertrail for Web" 
+					slug="papertrail" 
+				%}
+				
+				{% include thumbnail.html 
+					title="EmberWatch" 
+					slug="emberwatch" 
+				%}
+				
+				{% include thumbnail.html 
+					title="Deck of Cards Workout" 
+					slug="deck-of-cards-workout" 
+				%}
+				
+				{% include thumbnail.html 
+					title="Famous Workouts" 
+					slug="famous-workouts" 
+				%}
+				
+				{% include thumbnail.html 
+					title="The Voternator" 
+					slug="voternator" 
+				%}
 			</ul>
 		</p>
 
-		<div class="container">
-			<footer>
-				&copy; <script>document.write(new Date().getFullYear())</script> Freeman Industries.
-			</footer>
-		</div>
+		{% include footer.html %}
 
 	</body>
 </html>

@@ -1,23 +1,18 @@
+---
+title: Papertrail for Web - The future of statutory safety inspections
+slug: papertrail
+
+link: http://www.papertrail.io
+---
 <!DOCTYPE html>
 <html>
-<head>
-
-		<meta name="charset" content="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-		<title>Papertrail for Web - The future of statutory safety inspections</title>
-
-		<link rel="stylesheet" href="/css/main.css">
-		<script src="/js/main.js"></script>
-
+	<head>
+		{% include meta.html title=page.title %}
 	</head>
 
 	<body>
 
-		<div class="headline">
-			<video class="headline" src="https://freeman-industries.github.io/portfolio-videos/15fps/papertrail.mp4" muted autoplay loop></video>
-			<a href="/"><img class="logo" src="/img/freeman.svg"></a>
-		</div>
+		{% include headline.html slug=page.slug %}
 
 		<div class="container">
 
@@ -33,16 +28,11 @@
 				We successfully implemented a redesign of their web app over a two-month period, and the app has been handed over to and iterated upon many times since then by their in-house dev team.
 			</p>
 
-			<p>
-				<a class="huge" href="http://www.papertrail.io">
-					www.papertrail.io
-				</a>
-			</p>
-
-			<footer>
-				&copy; <script>document.write(new Date().getFullYear())</script> Freeman Industries.
-			</footer>
+			{% include links.html %}
+			
 		</div>
+
+		{% include footer.html %}
 
 	</body>
 </html>

@@ -1,23 +1,20 @@
+---
+title: Deck of Cards Workout - Fun bodyweight workouts for any location
+slug: deck-of-cards-workout
+
+ios: https://itunes.apple.com/app/deck-cards-workout-lose-weight/id1016007666
+android: https://play.google.com/store/apps/details?id=com.nabilfreeman.androidstudiowebviewboilerplate&hl=en
+source: http://github.com/nabilfreeman/deck-of-cards-workout
+---
 <!DOCTYPE html>
 <html>
-<head>
-
-		<meta name="charset" content="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-		<title>Deck of Cards Workout - Fun bodyweight workouts for any location</title>
-
-		<link rel="stylesheet" href="/css/main.css">
-		<script src="/js/main.js"></script>
-
+	<head>
+		{% include meta.html title=page.title %}
 	</head>
 
 	<body>
 
-		<div class="headline">
-			<video class="headline" src="https://freeman-industries.github.io/portfolio-videos/15fps/deck-of-cards-workout.mp4" muted autoplay loop></video>
-			<a href="/"><img class="logo" src="/img/freeman.svg"></a>
-		</div>
+		{% include headline.html slug=page.slug %}
 
 		<div class="container">
 
@@ -33,25 +30,11 @@
 				At Freeman Industries we all have some personal experience with the difficulty of weight loss, so this project combined with <a href="/products/famous-workouts.html">Famous Workouts</a> is our shot at getting people to think more about fitness.
 			</p>
 
-			<p class="app-links">
-				<a href="https://itunes.apple.com/app/deck-cards-workout-lose-weight/id1016007666">
-					<img src="/img/appstore.svg">
-				</a>
-				<a href="https://play.google.com/store/apps/details?id=com.nabilfreeman.androidstudiowebviewboilerplate&hl=en">
-					<img src="/img/playstore.svg">
-				</a>
-			</p>
-
-			<p>
-				<a href="http://github.com/nabilfreeman/deck-of-cards-workout">
-					Source code on GitHub
-				</a>
-			</p>
-
-			<footer>
-				&copy; <script>document.write(new Date().getFullYear())</script> Freeman Industries.
-			</footer>
+			{% include links.html %}
+			
 		</div>
+
+		{% include footer.html %}
 
 	</body>
 </html>

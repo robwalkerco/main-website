@@ -1,23 +1,18 @@
+---
+title: Tippler - On-demand wine straight to your doorstep
+slug: tippler
+
+link: http://www.tippler.com.cn
+---
 <!DOCTYPE html>
 <html>
-<head>
-
-		<meta name="charset" content="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-		<title>Tippler - On-demand wine straight to your doorstep</title>
-
-		<link rel="stylesheet" href="/css/main.css">
-		<script src="/js/main.js"></script>
-
+	<head>
+		{% include meta.html title=page.title %}
 	</head>
 
 	<body>
 
-		<div class="headline">
-			<video class="headline" src="https://freeman-industries.github.io/portfolio-videos/15fps/tippler.mp4" muted autoplay loop></video>
-			<a href="/"><img class="logo" src="/img/freeman.svg"></a>
-		</div>
+		{% include headline.html slug=page.slug %}
 
 		<div class="container">
 
@@ -36,16 +31,11 @@
 				This was our first time shipping code in Mainland China and first time using YooPay and Alicloud.
 			</p>
 
-			<p>
-				<a class="huge" href="http://www.tippler.com.cn">
-					www.tippler.com.cn
-				</a>
-			</p>
-
-			<footer>
-				&copy; <script>document.write(new Date().getFullYear())</script> Freeman Industries.
-			</footer>
+			{% include links.html %}
+			
 		</div>
+
+		{% include footer.html %}
 
 	</body>
 </html>
