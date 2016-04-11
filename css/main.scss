@@ -3,6 +3,8 @@
 # @author nabil freeman http://github.com/nabilfreeman
 ---
 
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
 @mixin box-sizing($type){
 	-webkit-box-sizing:$type;
 	-moz-box-sizing:$type;
@@ -28,24 +30,27 @@
 }
 
 body{
-	font-family:'Menlo', 'Ubuntu', 'Courier New', 'Courier', monospace;
+	font-family:'Inconsolata', 'Menlo', 'Ubuntu', 'Courier New', 'Courier', monospace;
 
 	text-align:center;
 
-	line-height:2;
+	line-height:200%;
 
 	margin:0px;
 	padding:0px;
 
+	letter-spacing: 0.5px;
+    font-size: 20px;
+
 	.container{
 		margin:0 auto;
-		max-width:700px;
+		max-width:720px;
 		padding:0px 20px;
 	}
 
 	h1{
 		margin-top:60px;
-		font-size:32px;
+		font-size:180%;
 	}
 
 	a{
@@ -112,7 +117,7 @@ body{
 		.thumbnail{
 			display:inline-block;
 			background:#4000FF;
-			font-size:14px;
+			font-size:17px;
 			margin:5px;
 
 			&:hover{
@@ -160,7 +165,7 @@ body{
 		color:#888;
 
 		a{
-			font-size:13px;
+			font-size:80%;
 			color:#888;
 			font-weight:normal;
 		}
