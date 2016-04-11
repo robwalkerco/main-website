@@ -83,6 +83,16 @@ title: Freeman Industries
 			</div>
 		</p>
 
+		<script>
+			if(document.body.clientWidth > 716){
+				var thumbnails = document.querySelectorAll(".thumbnail");
+
+				thumbnails.forEach(function(thumbnail){
+					thumbnail.querySelector("video").play();
+				})
+			}
+		</script>
+
 		{% include footer.html %}
 
 	</body>
