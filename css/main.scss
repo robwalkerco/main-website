@@ -40,7 +40,7 @@ body{
 	padding:0px;
 
 	letter-spacing: 0.5px;
-    font-size: 20px;
+	font-size: 20px;
 
 	.container{
 		margin:0 auto;
@@ -51,6 +51,10 @@ body{
 	h1{
 		margin-top:60px;
 		font-size:180%;
+	}
+	
+	small{
+		color:#888;
 	}
 
 	a{
