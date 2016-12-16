@@ -1,0 +1,86 @@
+---
+title: Freeman Industries
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include meta.html %}
+	</head>
+
+	<body>
+
+		<div class="container">
+			<a href="/"><img class="logo" src="/img/freeman.svg"></a>
+
+			<h1>
+				Freeman Industries
+			</h1>
+
+			<p>
+				I am Nabil Freeman, a British full-stack developer & lover of JavaScript.<br>Freeman Industries is my first successful business (I tried a few times).
+			</p>
+		</div>
+
+		<div>
+			<h1>
+				Links
+			</h1>
+			<div class="thumbs">
+				<div class="thumbnail">
+					<a href="/contracts">
+						<div class="title">
+							What Freeman Industries Does
+						</div>
+						<div class="meta">
+							...and who we work with.
+						</div>
+					</a>
+				</div>
+
+				<div class="thumbnail">
+					<a href="/talks">
+						<div class="title">
+							My Talks
+						</div>
+						<div class="meta">
+							You can find resources related to my talks here.
+						</div>
+					</a>
+				</div>
+
+				<div class="thumbnail">
+					<a href="https://angel.co/nabil">
+						<div class="title">
+							Resumé
+						</div>
+						<div class="meta">
+							My career and education (on AngelList)
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<h1>
+				Contact
+			</h1>
+			<p>
+				Contact me any time at <span class="freeman-email"></span>. No salespeople, no recruiters. You can find me in London, Shanghai, or somewhere in between.
+			</p>
+		</div>
+
+		<script>
+			if(document.body.clientWidth > 716){
+				var thumbnails = document.querySelectorAll(".thumbnail");
+
+				thumbnails.forEach(function(thumbnail){
+					thumbnail.querySelector("video").play();
+				})
+			}
+		</script>
+
+		{% include footer.html %}
+
+	</body>
+</html>
