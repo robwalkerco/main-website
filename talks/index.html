@@ -1,0 +1,53 @@
+---
+title: Freeman Industries
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include meta.html %}
+	</head>
+
+	<body>
+
+		<div class="container">
+			<a href="/"><img class="logo" src="/img/freeman.svg"></a>
+
+			<h1>
+				Talks
+			</h1>
+
+			<p>
+				If you've been to one of my talks and are looking for resources, the slides on this page are for you.
+			</p>
+
+			<h1>
+				PDF Slides
+			</h1>
+		</div>
+
+		<p>
+			<div class="thumbs">
+				{% include talk_thumbnail.html 
+					title="Meteor in Production" 
+					slug="2016-12-15-meteor-in-production"
+					date="2016-12-15"
+					location="Coderbunker, Shanghai"
+				%}
+
+			</div>
+		</p>
+
+		<script>
+			if(document.body.clientWidth > 716){
+				var thumbnails = document.querySelectorAll(".thumbnail");
+
+				thumbnails.forEach(function(thumbnail){
+					thumbnail.querySelector("video").play();
+				})
+			}
+		</script>
+
+		{% include footer.html %}
+
+	</body>
+</html>
