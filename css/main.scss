@@ -214,9 +214,28 @@ body{
 
 	.floating-head{
 		position:fixed;
-		bottom:0px;
+		bottom:10px;
 		left:0px;
 		width:200px;
+		animation:jiggle 0.3s linear alternate infinite;
+
+		@media screen and (max-width: 420px){
+			width:100px;
+		}
+
+		@media screen and (max-width: 320px){
+			width:80px;
+		}
+	}
+
+	@keyframes jiggle{
+		from{
+			transform:rotate(-5deg) translateY(0px);
+		}
+
+		to{
+			transform:rotate(5deg) translateY(10px);
+		}
 	}
 }
 
