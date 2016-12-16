@@ -211,6 +211,13 @@ body{
 	.freeman-email:after{
 		content:'freeman@instafork.com';
 	}
+
+	.floating-head{
+		position:fixed;
+		bottom:0px;
+		left:0px;
+		width:200px;
+	}
 }
 
 @import "voternator-demo";
